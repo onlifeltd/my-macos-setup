@@ -41,7 +41,6 @@
     - gradle
     - maven
     - node
-    - clojure
     - golang
     - kotlin
     - ruby
