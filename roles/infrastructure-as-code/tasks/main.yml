@@ -23,12 +23,6 @@
     name: ansible-lint
     executable: pipx
 
-- name: Install AWS CLI tools
-  ansible.builtin.pip:
-    name: awscli
-    extra_args: --ignore-installed six
-  become: true
-
 - name: Install Vagrant for managing development environments
   community.general.homebrew_cask:
     name: vagrant
@@ -41,23 +35,6 @@
   community.general.homebrew:
     name: hashicorp/tap/terraform
 
-- name: Install bundler for managing ruby
-  gem:
-    name: bundler
-    executable: ~/.rbenv/shims/gem
-
-- name: Install direnv for environment management
-  community.general.homebrew:
-    name: direnv
-
-- name: Install tflint Terraform linting tool
-  community.general.homebrew:
-    name: tflint
-
-- name: Install terraform-docs for generating Terraform documentation
-  community.general.homebrew:
-    name: terraform-docs
-
 - name: Install Packer for building multiple artifacts from configuration management
   community.general.homebrew:
     name: packer
@@ -69,10 +46,6 @@
 - name: Install Kuberenetes command line
   community.general.homebrew:
     name: kubernetes-cli
-
-- name: Install Act for testing local GitHub workflows
-  community.general.homebrew:
-    name: act
 
 - name: Install vault
   community.general.homebrew:
