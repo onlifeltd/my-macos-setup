@@ -1,6 +1,6 @@
 # My macOS Setup
 
-[![Continuous integration](https://github.com/svo/my-macos-setup/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/svo/my-macos-setup/actions/workflows/main.yml)
+[![Continuous integration](https://github.com/onlifeltd/my-macos-setup/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/onlifeltd/my-macos-setup/actions/workflows/main.yml)
 
 ## Building
 
