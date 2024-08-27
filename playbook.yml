@@ -37,7 +37,6 @@
     - python
     - system
     - gradle
-    - maven
     - node
     - golang
     - ruby
