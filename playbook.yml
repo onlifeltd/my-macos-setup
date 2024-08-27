@@ -46,7 +46,6 @@
     - security
     - internet
     - infrastructure-as-code
-    - media
 
   post_tasks:
 
