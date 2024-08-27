@@ -1,18 +1,6 @@
-- name: Install tor anonymizing overlay network for TCP
-  community.general.homebrew:
-    name: tor
-
 - name: Install nmap for network discovery and security auditing
   community.general.homebrew:
     name: nmap
-
-- name: Install ncrack network authentication cracking tool
-  community.general.homebrew:
-    name: ncrack
-
-- name: Install theHarvester e-mail account and subdomain discovery tool
-  community.general.homebrew:
-    name: theharvester
 
 - name: Install nikto web server scanner
   community.general.homebrew:
