@@ -9,10 +9,6 @@
   community.general.homebrew_cask:
     name: tableplus
 
-- name: Install dbvisualizer
-  community.general.homebrew_cask:
-    name: dbvisualizer
-
 - name: Install psql client
   community.general.homebrew:
     name: libpq
@@ -38,14 +34,6 @@
   community.general.homebrew_cask:
     name: alfred
 
-- name: Install Dropbox for online storage
-  community.general.homebrew_cask:
-    name: dropbox
-
-- name: Install mounty for NTFS volumes
-  community.general.homebrew_cask:
-    name: mounty
-
 - name: Install The Unarchiver
   community.general.homebrew_cask:
     name: the-unarchiver
@@ -58,17 +46,9 @@
   community.general.homebrew_cask:
     name: flycut
 
-- name: Install lastpass password manager
-  community.general.homebrew_cask:
-    name: lastpass
-
 - name: Install clocker timezone menu
   community.general.homebrew_cask:
     name: clocker
-
-- name: Install Stopwatch, alarm clock, and clock utility
-  community.general.homebrew_cask:
-    name: timer
 
 - name: Install Google Drive
   community.general.homebrew_cask:
