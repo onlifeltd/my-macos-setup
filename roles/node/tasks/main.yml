@@ -21,23 +21,5 @@
 - name: Set default node version for NVM
   ansible.builtin.shell: export NVM_DIR="$HOME/.nvm" && . "$(brew --prefix nvm)/nvm.sh" && nvm alias default node
 
-- name: Install Electron Packager
-  ansible.builtin.shell: export NVM_DIR="$HOME/.nvm" && . "$(brew --prefix nvm)/nvm.sh" && $HOME/.nvm/versions/node/v20.10.0/bin/npm install electron-packager --global
-
-- name: Install Yarn
-  ansible.builtin.shell: export NVM_DIR="$HOME/.nvm" && . "$(brew --prefix nvm)/nvm.sh" && $HOME/.nvm/versions/node/v20.10.0/bin/npm install yarn --global
-
-- name: Install Gitinspector
-  ansible.builtin.shell: export NVM_DIR="$HOME/.nvm" && . "$(brew --prefix nvm)/nvm.sh" && $HOME/.nvm/versions/node/v20.10.0/bin/npm install gitinspector --global
-
-- name: Install git-stats
-  ansible.builtin.shell: export NVM_DIR="$HOME/.nvm" && . "$(brew --prefix nvm)/nvm.sh" && $HOME/.nvm/versions/node/v20.10.0/bin/npm install git-stats-html --global
-
-- name: Install Markdown to Confluence converter
-  ansible.builtin.shell: export NVM_DIR="$HOME/.nvm" && . "$(brew --prefix nvm)/nvm.sh" && $HOME/.nvm/versions/node/v20.10.0/bin/npm install markdown2confluence-cws --global
-
-- name: Install js-beautify
-  ansible.builtin.shell: export NVM_DIR="$HOME/.nvm" && . "$(brew --prefix nvm)/nvm.sh" && $HOME/.nvm/versions/node/v20.10.0/bin/npm install js-beautify --global
-
 - name: Install action-validator
   ansible.builtin.shell: export NVM_DIR="$HOME/.nvm" && . "$(brew --prefix nvm)/nvm.sh" && $HOME/.nvm/versions/node/v20.10.0/bin/npm install @action-validator/core @action-validator/cli --global
