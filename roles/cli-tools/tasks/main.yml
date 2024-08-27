@@ -18,33 +18,9 @@
   community.general.homebrew:
     name: jq
 
-- name: Install yq XML/YAML query procesor
-  ansible.builtin.pip:
-    name: yq
-
-- name: Install XmlStarlet XML toolkit
-  community.general.homebrew:
-    name: xmlstarlet
-
-- name: Install docutils for processing documentation
-  ansible.builtin.pip:
-    name: docutils
-
-- name: Install python-json2csv for JSON to CSV
-  ansible.builtin.pip:
-    name: python-json2csv
-
 - name: Install cloc lines of code utility
   community.general.homebrew:
     name: cloc
-
-- name: Install scc code counter
-  community.general.homebrew:
-    name: scc
-
-- name: Install petname command line name generator
-  ansible.builtin.pip:
-    name: petname
 
 - name: Install core GNU utilities
   community.general.homebrew:
@@ -84,32 +60,6 @@
       compinit
       fi
 
-- name: Install tmux terminal multiplexer
-  community.general.homebrew:
-    name: tmux
-
-- name: Setup tmux
-  ansible.builtin.blockinfile:
-    create: true
-    path: ~/.tmux.conf
-    mode: "0644"
-    block: |
-      bind c new-window -c "#{pane_current_path}"
-      bind '"' split-window -c "#{pane_current_path}"
-      bind % split-window -h -c "#{pane_current_path}"
-
-- name: Start tmux by default in Terminal.app
-  ansible.builtin.blockinfile:
-    path: ~/.zshrc
-    marker: "# {mark} ANSIBLE MANAGED BLOCK (tmux start)"
-    block: |
-      TERM=xterm &&
-      if [ "$TMUX" = "" ]; then tmux; fi
-
-- name: Install Midnight Commander command line file manager
-  community.general.homebrew:
-    name: midnight-commander
-
 - name: Install icdiff side-by-side diff tool
   community.general.homebrew:
     name: icdiff
@@ -129,10 +79,6 @@
   community.general.homebrew:
     name: topgrade
 
-- name: Install letsencrypt SSL certificate command line tools
-  community.general.homebrew:
-    name: certbot
-
 - name: Install htop for process monitoring
   community.general.homebrew:
     name: htop
@@ -144,7 +90,3 @@
 - name: Install NCurses Disk Usage utility
   community.general.homebrew:
     name: ncdu
-
-- name: Install traceroute for network diagnostics
-  community.general.homebrew:
-    name: tcptraceroute
